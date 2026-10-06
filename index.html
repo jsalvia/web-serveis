@@ -9,80 +9,125 @@
 <meta property="og:description" content="Relat, campanyes i crisi per a qui vol moure decisions.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="ca_ES">
+<meta name="theme-color" content="#a33b22">
 <meta name="robots" content="noindex">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23a33b22'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='18' fill='%23fff' text-anchor='middle'%3EJS%3C/text%3E%3C/svg%3E">
 <style>
   :root{
-    --ink:#12161c;
-    --muted:#5a6472;
-    --line:#e2e6ea;
-    --bg:#fbfbfc;
-    --card:#ffffff;
-    --accent:#9c3b26;
-    --accent-dark:#7d2e1d;
+    --ink:#151a20; --muted:#5b6472; --line:#e7e1d7;
+    --bg:#faf7f2; --card:#ffffff; --band:#f3ece3;
+    --accent:#a33b22; --accent-dark:#7f2c19; --soft:#f6e8e1;
+    --max:1020px;
   }
   *{box-sizing:border-box}
   html{scroll-behavior:smooth}
-  body{
-    margin:0;background:var(--bg);color:var(--ink);
+  body{margin:0;background:var(--bg);color:var(--ink);
     font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-    line-height:1.6;-webkit-font-smoothing:antialiased;
-  }
-  h1,h2,h3{font-family:Georgia,"Times New Roman",serif;line-height:1.25;margin:0 0 .5em}
+    line-height:1.65;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+  h1,h2,h3,.brand,.quote{font-family:Georgia,"Iowan Old Style","Palatino Linotype","Times New Roman",serif;line-height:1.18;margin:0 0 .5em;font-weight:600}
   a{color:var(--accent);text-decoration:none}
   a:hover{text-decoration:underline}
-  .wrap{max-width:980px;margin:0 auto;padding:0 22px}
-  header.top{position:sticky;top:0;background:rgba(251,251,252,.92);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);z-index:10}
-  header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:62px}
-  .brand{font-family:Georgia,serif;font-size:1.05rem;letter-spacing:.02em}
-  .brand span{color:var(--accent)}
-  nav a{margin-left:20px;color:var(--ink);font-size:.94rem}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+  .eyebrow{display:flex;align-items:center;gap:12px;text-transform:uppercase;letter-spacing:.18em;font-size:.72rem;color:var(--accent);font-weight:700;margin-bottom:18px}
+  .eyebrow::after{content:"";flex:1;height:1px;background:var(--line)}
+  .num{font-variant-numeric:tabular-nums;color:var(--muted);font-weight:700}
+
+  header.top{position:sticky;top:0;z-index:20;background:rgba(250,247,242,.86);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .brand{font-size:1.06rem;letter-spacing:.01em;color:var(--ink)}
+  .brand b{color:var(--accent)}
+  nav a{margin-left:22px;color:var(--ink);font-size:.92rem}
   nav a:hover{color:var(--accent);text-decoration:none}
-  @media(max-width:620px){nav a{margin-left:12px;font-size:.86rem}}
-  section{padding:64px 0;border-bottom:1px solid var(--line)}
-  section:last-of-type{border-bottom:0}
-  .hero{padding:84px 0 72px}
-  .kicker{text-transform:uppercase;letter-spacing:.16em;font-size:.74rem;color:var(--accent);font-weight:700;margin-bottom:16px}
-  .hero h1{font-size:clamp(1.9rem,4.4vw,3rem);max-width:20ch}
-  .hero p.lead{font-size:clamp(1.05rem,2vw,1.25rem);color:var(--muted);max-width:56ch;margin:0 0 30px}
-  .btn{display:inline-block;background:var(--accent);color:#fff;padding:13px 26px;border-radius:4px;font-weight:600;font-size:.98rem}
+  @media(max-width:660px){nav a{margin-left:14px;font-size:.84rem}}
+
+  .hero{position:relative;padding:76px 0 66px;overflow:hidden}
+  .hero::before{content:"";position:absolute;inset:0;background:
+     radial-gradient(720px 340px at 88% -10%, var(--soft), transparent 70%);
+     pointer-events:none}
+  .hero .wrap{position:relative;display:grid;grid-template-columns:1.35fr .9fr;gap:44px;align-items:center}
+  .hero h1{font-size:clamp(2rem,4.6vw,3.15rem);max-width:22ch;margin-bottom:.35em}
+  .hero p.lead{font-size:clamp(1.04rem,2vw,1.22rem);color:var(--muted);max-width:54ch;margin:0 0 30px}
+  .cta-row{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+  .btn{display:inline-block;background:var(--accent);color:#fff;padding:13px 26px;border-radius:5px;font-weight:600;font-size:.97rem;box-shadow:0 1px 0 rgba(0,0,0,.04)}
   .btn:hover{background:var(--accent-dark);text-decoration:none}
-  .btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line);margin-left:10px}
-  .btn.ghost:hover{border-color:var(--accent);color:var(--accent)}
-  h2.section-title{font-size:clamp(1.4rem,3vw,1.9rem)}
-  .grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));margin-top:28px}
-  .card{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:22px}
+  .btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line);box-shadow:none}
+  .btn.ghost:hover{border-color:var(--accent);color:var(--accent);background:transparent}
+  .portrait{position:relative}
+  .portrait .ph{aspect-ratio:4/5;border-radius:8px;background:linear-gradient(160deg,#efe7dc,#e4d8c8);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:.85rem;text-align:center;padding:20px}
+  .portrait .tag{position:absolute;left:-14px;bottom:18px;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:10px 14px;font-size:.82rem;box-shadow:0 8px 24px rgba(20,20,20,.08)}
+  .portrait .tag b{color:var(--accent)}
+  @media(max-width:820px){.hero .wrap{grid-template-columns:1fr}.portrait{display:none}}
+
+  section{padding:66px 0}
+  .band{background:var(--band)}
+  .section-title{font-size:clamp(1.45rem,3vw,2rem);max-width:26ch}
+  .section-lead{color:var(--muted);max-width:62ch;margin-top:-.2em}
+
+  .grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));margin-top:34px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:24px;transition:transform .16s ease,box-shadow .16s ease,border-color .16s ease}
+  .card:hover{transform:translateY(-3px);box-shadow:0 14px 34px rgba(24,24,24,.07);border-color:#d9cfc0}
+  .card .ic{width:38px;height:38px;border-radius:8px;background:var(--soft);color:var(--accent);display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+  .card .ic svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
   .card h3{font-size:1.08rem;margin-bottom:.35em}
   .card p{margin:0;color:var(--muted);font-size:.95rem}
-  ul.plain{list-style:none;padding:0;margin:18px 0 0}
-  ul.plain li{padding:10px 0 10px 26px;position:relative;border-bottom:1px solid var(--line)}
+
+  ul.plain{list-style:none;padding:0;margin:22px 0 0}
+  ul.plain li{padding:12px 0 12px 30px;position:relative;border-bottom:1px solid var(--line)}
   ul.plain li:last-child{border-bottom:0}
-  ul.plain li::before{content:"";position:absolute;left:2px;top:19px;width:8px;height:8px;background:var(--accent);border-radius:50%}
-  .steps{counter-reset:s;margin-top:26px}
-  .step{position:relative;padding:0 0 24px 56px;counter-increment:s}
-  .step::before{content:counter(s);position:absolute;left:0;top:0;width:36px;height:36px;border:1px solid var(--accent);color:var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700}
+  ul.plain li::before{content:"";position:absolute;left:2px;top:20px;width:9px;height:9px;background:var(--accent);border-radius:50%}
+  ul.plain strong{font-weight:600}
+
+  .quote{border-left:3px solid var(--accent);padding:6px 0 6px 20px;font-size:clamp(1.15rem,2.4vw,1.5rem);max-width:60ch;color:var(--ink)}
+
+  .steps{counter-reset:s;margin-top:34px;display:grid;gap:26px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+  .step{position:relative;padding:0 0 0 56px;counter-increment:s}
+  .step::before{content:counter(s);position:absolute;left:0;top:-2px;width:38px;height:38px;border:1.5px solid var(--accent);color:var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;background:var(--bg)}
+  .band .step::before{background:var(--band)}
   .step h3{font-size:1.02rem;margin-bottom:.2em}
   .step p{margin:0;color:var(--muted);font-size:.95rem}
-  .muted{color:var(--muted)}
-  .cta-box{background:var(--ink);color:#fff;border-radius:6px;padding:44px;text-align:center}
-  .cta-box h2{color:#fff}
-  .cta-box p{color:#c7ccd3;max-width:52ch;margin:0 auto 26px}
+
+  .timeline{margin-top:34px;border-left:1px solid var(--line);padding-left:26px}
+  .tl{position:relative;padding-bottom:26px}
+  .tl:last-child{padding-bottom:0}
+  .tl::before{content:"";position:absolute;left:-31px;top:6px;width:11px;height:11px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px var(--bg)}
+  .tl .when{font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);font-weight:700}
+  .tl h3{font-size:1.06rem;margin:.15em 0 .15em}
+  .tl p{margin:0;color:var(--muted);font-size:.95rem}
+
+  .case{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:24px}
+  .case .k{font-size:.74rem;text-transform:uppercase;letter-spacing:.14em;color:var(--accent);font-weight:700}
+  .case h3{font-size:1.05rem;margin:.3em 0 .5em}
+  .case p{margin:0;color:var(--muted);font-size:.94rem}
+  .case .res{margin-top:14px;padding-top:12px;border-top:1px dashed var(--line);font-size:.9rem;color:var(--ink);font-weight:600}
+
+  .tests{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));margin-top:34px}
+  .test{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:26px}
+  .test p{margin:0 0 16px;color:var(--ink);font-family:Georgia,serif;font-size:1.05rem}
+  .test .who{font-size:.85rem;color:var(--muted)}
+
+  .cta-box{background:var(--ink);color:#fff;border-radius:10px;padding:48px;text-align:center}
+  .cta-box h2{color:#fff;font-size:clamp(1.5rem,3vw,2rem)}
+  .cta-box p{color:#c9ccd2;max-width:52ch;margin:0 auto 26px}
   .cta-box .btn{background:#fff;color:var(--ink)}
   .cta-box .btn:hover{background:#e9ebee}
-  .contact-lines{margin-top:24px;font-size:1.02rem}
-  .contact-lines div{margin:8px 0}
-  .contact-lines strong{display:inline-block;min-width:88px;color:var(--muted);font-weight:600;font-size:.9rem;text-transform:uppercase;letter-spacing:.06em}
-  footer{padding:30px 0 50px;color:var(--muted);font-size:.85rem}
+  .contact-lines{margin-top:28px;font-size:1rem;display:grid;gap:8px;justify-items:center}
+  .contact-lines div{color:#c9ccd2}
+  .contact-lines strong{display:inline-block;min-width:92px;color:#8f959d;font-weight:600;font-size:.82rem;text-transform:uppercase;letter-spacing:.08em}
+
+  footer{padding:34px 0 56px;color:var(--muted);font-size:.85rem;border-top:1px solid var(--line)}
   footer .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+  footer a{color:var(--muted)}
 </style>
 </head>
 <body>
 
 <header class="top">
   <div class="wrap">
-    <div class="brand">Jordi Salvia <span>·</span> Comunicació</div>
+    <div class="brand">Jordi Salvia <b>·</b> Comunicació</div>
     <nav>
       <a href="#serveis">Serveis</a>
       <a href="#metode">Mètode</a>
+      <a href="#casos">Casos</a>
       <a href="#contacte">Contacte</a>
     </nav>
   </div>
@@ -90,18 +135,26 @@
 
 <section class="hero">
   <div class="wrap">
-    <div class="kicker">Comunicació estratègica i d'incidència</div>
-    <h1>Relat, campanyes i crisi per a qui vol moure decisions.</h1>
-    <p class="lead">Ajudo entitats, plataformes, sindicats, grups polítics, institucions i ONG a aconseguir que allò que diuen arribi a algú amb poder de decidir.</p>
-    <a class="btn" href="#contacte">Parlem</a>
-    <a class="btn ghost" href="#serveis">Què faig</a>
+    <div>
+      <div class="eyebrow">Comunicació estratègica i d'incidència</div>
+      <h1>Relat, campanyes i crisi per a qui vol moure decisions.</h1>
+      <p class="lead">Ajudo entitats, plataformes, sindicats, grups polítics, institucions i ONG a aconseguir que allò que diuen arribi a algú amb poder de decidir.</p>
+      <div class="cta-row">
+        <a class="btn" href="#contacte">Parlem</a>
+        <a class="btn ghost" href="#serveis">Què faig</a>
+      </div>
+    </div>
+    <div class="portrait">
+      <div class="ph">[ FOTO TEVA · vertical 4:5 ]<br>aquí hi aniria el retrat</div>
+      <div class="tag"><b>20+ anys</b> comunicant causes</div>
+    </div>
   </div>
 </section>
 
 <section id="publics">
   <div class="wrap">
-    <h2 class="section-title">Per a qui treballo</h2>
-    <p class="muted">Organitzacions que no volen només ser escoltades — volen incidir.</p>
+    <div class="eyebrow"><span class="num">01</span> Per a qui treballo</div>
+    <h2 class="section-title">Organitzacions que no volen només ser escoltades — volen incidir.</h2>
     <ul class="plain">
       <li><strong>Entitats i plataformes</strong> ciutadanes que volen posar un tema a l'agenda.</li>
       <li><strong>Sindicats</strong> que necessiten argumentari, relat i veu pública.</li>
@@ -111,48 +164,30 @@
   </div>
 </section>
 
-<section id="problema">
+<section class="band" id="problema">
   <div class="wrap">
-    <h2 class="section-title">El problema que resolc</h2>
-    <p class="lead" style="max-width:62ch">Tens raó, però no arribes. Tens el tema, però no el relat. Surt la crisi i ningú sap què dir. La teva causa competeix amb missatges millors — i perd per comunicació, no per arguments.</p>
+    <div class="eyebrow"><span class="num">02</span> El problema que resolc</div>
+    <p class="quote">Tens raó, però no arribes. Tens el tema, però no el relat. Surt la crisi i ningú sap què dir. La teva causa competeix amb missatges millors — i perd per comunicació, no per arguments.</p>
   </div>
 </section>
 
 <section id="serveis">
   <div class="wrap">
-    <h2 class="section-title">En què et puc ajudar</h2>
+    <div class="eyebrow"><span class="num">03</span> En què et puc ajudar</div>
     <div class="grid">
-      <div class="card">
-        <h3>Estratègia i relat</h3>
-        <p>Objectiu, públics decisoris, missatge i moment. Un relat que es recorda i que et diferencia.</p>
-      </div>
-      <div class="card">
-        <h3>Planificació comunicativa</h3>
-        <p>De campanya, de mandat o de projecte: calendari, veus, canals i argumentari.</p>
-      </div>
-      <div class="card">
-        <h3>Discursos i guions</h3>
-        <p>Intervencions, rodes de premsa, debats i compareixences. Text que es diu bé i aguanta la rèplica.</p>
-      </div>
-      <div class="card">
-        <h3>Campanyes d'incidència</h3>
-        <p>Per canviar una política, aturar un projecte o posar un tema a l'agenda pública.</p>
-      </div>
-      <div class="card">
-        <h3>Resposta i contrarrelat</h3>
-        <p>Argumentaris per quan l'altre costat ataca, i per guanyar el marc del debat.</p>
-      </div>
-      <div class="card">
-        <h3>Gestió de crisi</h3>
-        <p>Protocol, missatge i acompanyament en calent, quan tot va de pressa.</p>
-      </div>
+      <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 12h4l3-8 4 16 3-8h4"/></svg></div><h3>Estratègia i relat</h3><p>Objectiu, públics decisoris, missatge i moment. Un relat que es recorda i que et diferencia.</p></div>
+      <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h10"/></svg></div><h3>Planificació comunicativa</h3><p>De campanya, de mandat o de projecte: calendari, veus, canals i argumentari.</p></div>
+      <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3v18M5 8l7-5 7 5"/><path d="M5 16l7 5 7-5"/></svg></div><h3>Discursos i guions</h3><p>Intervencions, rodes de premsa, debats i compareixences. Text que es diu bé i aguanta la rèplica.</p></div>
+      <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 11l18-7-7 18-3-8-8-3z"/></svg></div><h3>Campanyes d'incidència</h3><p>Per canviar una política, aturar un projecte o posar un tema a l'agenda pública.</p></div>
+      <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 6h16v10H4z"/><path d="M8 20h8M12 16v4"/></svg></div><h3>Resposta i contrarrelat</h3><p>Argumentaris per quan l'altre costat ataca, i per guanyar el marc del debat.</p></div>
+      <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3l9 5v8l-9 5-9-5V8z"/><path d="M12 12l9-5M12 12v9M12 12L3 7"/></svg></div><h3>Gestió de crisi</h3><p>Protocol, missatge i acompanyament en calent, quan tot va de pressa.</p></div>
     </div>
   </div>
 </section>
 
-<section id="metode">
+<section class="band" id="metode">
   <div class="wrap">
-    <h2 class="section-title">Com treballo</h2>
+    <div class="eyebrow"><span class="num">04</span> Com treballo</div>
     <div class="steps">
       <div class="step"><h3>Escolto</h3><p>Què vols aconseguir i qui decideix. Sense això, la resta és soroll.</p></div>
       <div class="step"><h3>Fixo la línia</h3><p>Què dius, què no dius i com ho dius. El marc del debat es guanya aquí.</p></div>
@@ -162,20 +197,44 @@
   </div>
 </section>
 
-<section id="perque">
+<section id="trajectoria">
   <div class="wrap">
-    <h2 class="section-title">Per què jo</h2>
-    <ul class="plain">
-      <li><strong>Experiència institucional i política de primera mà</strong>, no teoria.</li>
-      <li><strong>Discreció:</strong> el protagonisme és teu, no meu.</li>
-      <li><strong>Dades i eines actuals</strong>, no només intuïció.</li>
-    </ul>
+    <div class="eyebrow"><span class="num">05</span> Trajectòria</div>
+    <div class="timeline">
+      <div class="tl"><div class="when">2026 — avui</div><h3>Consultor autònom · estratègia i incidència</h3><p>Acompanyo organitzacions i projectes. I, des del març, regidor de Cultura, Joventut i Cooperació a l'Ajuntament de Subirats.</p></div>
+      <div class="tl"><div class="when">2021 — 2024</div><h3>Director de comunicació nacional de la CUP</h3><p>Segona etapa de primera línia: relat, campanyes i veu pública en un cicle polític en canvi.</p></div>
+      <div class="tl"><div class="when">2011 — 2017</div><h3>Comunicació a la CUP</h3><p>Del salt al Parlament al 9-N i l'1-O: construir el relat d'una organització en plena irrupció.</p></div>
+      <div class="tl"><div class="when">abans</div><h3>Periodisme local</h3><p>Els inicis: explicar el que passa a prop de casa, amb rigor i ofici.</p></div>
+    </div>
   </div>
 </section>
 
-<section id="modalitats">
+<section class="band" id="casos">
   <div class="wrap">
-    <h2 class="section-title">Modalitats</h2>
+    <div class="eyebrow"><span class="num">06</span> Casos</div>
+    <h2 class="section-title">Què et demanaven, què vam fer, què va canviar.</h2>
+    <div class="grid">
+      <div class="case"><div class="k">Campanya</div><h3>[Cas 1 — títol]</h3><p>[Repte: què volien aconseguir i amb quin obstacle topaven.]</p><div class="res">→ [Resultat: què va canviar.]</div></div>
+      <div class="case"><div class="k">Crisi</div><h3>[Cas 2 — títol]</h3><p>[Repte: la situació i el rellotge en contra.]</p><div class="res">→ [Resultat: com es va girar.]</div></div>
+      <div class="case"><div class="k">Incidència</div><h3>[Cas 3 — títol]</h3><p>[Repte: la decisió que calia moure.]</p><div class="res">→ [Resultat: la decisió moguda.]</div></div>
+    </div>
+    <p class="section-lead" style="margin-top:26px">Potser hi ha casos que no pots fer públics per confiança: es poden explicar anonimitzats, i sovint funcionen igual.</p>
+  </div>
+</section>
+
+<section id="testimonis">
+  <div class="wrap">
+    <div class="eyebrow"><span class="num">07</span> Què en diuen</div>
+    <div class="tests">
+      <div class="test"><p>«[Testimoni 1 — dues línies, concret: què va aportar.]»</p><div class="who">[Nom], [càrrec/entitat]</div></div>
+      <div class="test"><p>«[Testimoni 2 — dues línies.]»</p><div class="who">[Nom], [càrrec/entitat]</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="modalitats">
+  <div class="wrap">
+    <div class="eyebrow"><span class="num">08</span> Modalitats</div>
     <div class="grid">
       <div class="card"><h3>Per projecte</h3><p>Una campanya, un discurs, una crisi. Abast tancat i preu tancat.</p></div>
       <div class="card"><h3>Acompanyament mensual</h3><p>Estratègia, relat i suport continuat, com un departament extern.</p></div>
@@ -190,10 +249,10 @@
       <h2>Com començar</h2>
       <p>Una primera conversa sense compromís per veure si encaixem.</p>
       <a class="btn" href="mailto:[CORREU]">Escriu-me</a>
-      <div class="contact-lines" style="text-align:left;display:inline-block;margin-top:30px">
+      <div class="contact-lines">
         <div><strong>Correu</strong> [CORREU]</div>
         <div><strong>Telèfon</strong> [TELÈFON]</div>
-        <div><strong>Web</strong> jordisalvia.pages.dev</div>
+        <div><strong>Bloc</strong> jordisalvia.pages.dev</div>
       </div>
     </div>
   </div>
