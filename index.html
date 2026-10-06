@@ -94,15 +94,17 @@
   .tl h3{font-size:1.06rem;margin:.15em 0 .15em}
   .tl p{margin:0;color:var(--muted);font-size:.95rem}
 
-  .case{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:24px}
+  .cases{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));margin-top:34px}
+  .case{position:relative;background:var(--card);border:1px solid var(--line);border-top:3px solid var(--accent);border-radius:8px;padding:26px}
   .case .k{font-size:.74rem;text-transform:uppercase;letter-spacing:.14em;color:var(--accent);font-weight:700}
-  .case h3{font-size:1.05rem;margin:.3em 0 .5em}
-  .case p{margin:0;color:var(--muted);font-size:.94rem}
-  .case .res{margin-top:14px;padding-top:12px;border-top:1px dashed var(--line);font-size:.9rem;color:var(--ink);font-weight:600}
+  .case h3{font-size:1.16rem;margin:.3em 0 .5em}
+  .case p{margin:0;color:var(--muted);font-size:.95rem}
+  .case .res{margin-top:16px;padding:13px 15px;background:var(--soft);border-radius:6px;font-size:.95rem;color:var(--accent-dark);font-weight:700}
 
   .tests{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));margin-top:34px}
-  .test{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:26px}
-  .test p{margin:0 0 16px;color:var(--ink);font-family:Georgia,serif;font-size:1.05rem}
+  .test{position:relative;background:var(--card);border:1px solid var(--line);border-radius:8px;padding:52px 26px 26px}
+  .test::before{content:"\201C";position:absolute;top:10px;left:22px;font-family:Georgia,serif;font-size:4rem;line-height:1;color:#e8ddcf}
+  .test p{margin:0 0 16px;color:var(--ink);font-family:Georgia,serif;font-size:1.12rem}
   .test .who{font-size:.85rem;color:var(--muted)}
 
   .cta-box{background:var(--ink);color:#fff;border-radius:10px;padding:48px;text-align:center}
@@ -204,9 +206,10 @@
     <div class="eyebrow"><span class="num">05</span> Trajectòria</div>
     <div class="timeline">
       <div class="tl"><div class="when">2026 — avui</div><h3>Consultor autònom · estratègia i incidència</h3><p>Acompanyo organitzacions i projectes. I, des del març, regidor de Cultura, Joventut i Cooperació a l'Ajuntament de Subirats.</p></div>
-      <div class="tl"><div class="when">2021 — 2024</div><h3>Director de comunicació nacional de la CUP</h3><p>Segona etapa de primera línia: relat, campanyes i veu pública en un cicle polític en canvi.</p></div>
-      <div class="tl"><div class="when">2011 — 2017</div><h3>Comunicació a la CUP</h3><p>Del salt al Parlament al 9-N i l'1-O: construir el relat d'una organització en plena irrupció.</p></div>
-      <div class="tl"><div class="when">abans</div><h3>Periodisme local</h3><p>Els inicis: explicar el que passa a prop de casa, amb rigor i ofici.</p></div>
+      <div class="tl"><div class="when">2021 — 2024</div><h3>Director de comunicació nacional</h3><p>Segona etapa de primera línia: relat, campanyes i veu pública en un cicle polític en canvi.</p></div>
+      <div class="tl"><div class="when">2011 — 2017</div><h3>Director de comunicació</h3><p>Del salt institucional al 9-N i l'1-O: construir el relat d'una organització en plena irrupció.</p></div>
+      <div class="tl"><div class="when">Etapa anterior</div><h3>Agències de comunicació i màrqueting</h3><p>Diverses agències i projectes, per a clients de sectors molt diferents: l'ofici après a base de fer-ne, moltes.</p></div>
+      <div class="tl"><div class="when">Els inicis</div><h3>Periodisme local</h3><p>Explicar el que passa a prop de casa, amb rigor i ofici.</p></div>
     </div>
   </div>
 </section>
@@ -215,7 +218,7 @@
   <div class="wrap">
     <div class="eyebrow"><span class="num">06</span> Casos</div>
     <h2 class="section-title">Què et demanaven, què vam fer, què va canviar.</h2>
-    <div class="grid">
+    <div class="cases">
       <div class="case"><div class="k">Campanya</div><h3>[Cas 1 — títol]</h3><p>[Repte: què volien aconseguir i amb quin obstacle topaven.]</p><div class="res">→ [Resultat: què va canviar.]</div></div>
       <div class="case"><div class="k">Crisi</div><h3>[Cas 2 — títol]</h3><p>[Repte: la situació i el rellotge en contra.]</p><div class="res">→ [Resultat: com es va girar.]</div></div>
       <div class="case"><div class="k">Incidència</div><h3>[Cas 3 — títol]</h3><p>[Repte: la decisió que calia moure.]</p><div class="res">→ [Resultat: la decisió moguda.]</div></div>
