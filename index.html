@@ -86,13 +86,9 @@
   .step h3{font-size:1.02rem;margin-bottom:.2em}
   .step p{margin:0;color:var(--muted);font-size:.95rem}
 
-  .timeline{margin-top:34px;border-left:1px solid var(--line);padding-left:26px}
-  .tl{position:relative;padding-bottom:26px}
-  .tl:last-child{padding-bottom:0}
-  .tl::before{content:"";position:absolute;left:-31px;top:6px;width:11px;height:11px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px var(--bg)}
-  .tl .when{font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);font-weight:700}
-  .tl h3{font-size:1.06rem;margin:.15em 0 .15em}
-  .tl p{margin:0;color:var(--muted);font-size:.95rem}
+  .card.exp{border-top:3px solid var(--accent)}
+  .card .k{font-size:.74rem;text-transform:uppercase;letter-spacing:.14em;color:var(--accent);font-weight:700;margin-bottom:10px}
+  .exp-now{margin-top:26px;color:var(--muted);max-width:62ch}
 
   .cases{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));margin-top:34px}
   .case{position:relative;background:var(--card);border:1px solid var(--line);border-top:3px solid var(--accent);border-radius:8px;padding:26px}
@@ -204,12 +200,14 @@
 <section id="trajectoria">
   <div class="wrap">
     <div class="eyebrow"><span class="num">05</span> Trajectòria</div>
-    <div class="timeline">
-      <div class="tl"><div class="when">Avui</div><h3>Consultor autònom · estratègia i incidència</h3><p>Acompanyo organitzacions i projectes. I, des del març, també regidor de Cultura, Joventut i Cooperació a l'Ajuntament de Subirats.</p></div>
-      <div class="tl"><div class="when">Més de deu anys</div><h3>Director de comunicació nacional</h3><p>Primera línia en el marc de la política nacional: discurs i estratègia, campanyes electorals, comunicació interna i coordinació d'equips.</p></div>
-      <div class="tl"><div class="when">Abans</div><h3>Agències, mitjans i estratègia digital</h3><p>Comunicació i màrqueting per a cooperatives de comunicació, mitjans digitals i projectes socials: xarxes, continguts i campanyes.</p></div>
-      <div class="tl"><div class="when">Els inicis</div><h3>Periodisme · cap de redacció</h3><p>Direcció d'un diari digital local: continguts, redacció i coordinació d'equip.</p></div>
+    <h2 class="section-title">Més de deu anys en primera línia.</h2>
+    <p class="section-lead">Del periodisme local a la direcció de comunicació nacional. Tres etapes que, més que un currículum, són tres escoles — i totes tres les poso avui al servei de la teva causa.</p>
+    <div class="grid">
+      <div class="card exp"><div class="k">Primera línia política</div><h3>Direcció de comunicació nacional</h3><p>Al capdavant del relat, les campanyes electorals, el discurs i la veu pública d'una organització, en un cicle polític que ho va capgirar tot. Coordinació d'equips i comunicació interna.</p></div>
+      <div class="card exp"><div class="k">Agències, mitjans i digital</div><h3>Comunicar per a clients</h3><p>Cooperatives de comunicació, mitjans digitals i projectes socials: màrqueting, xarxes, continguts i campanyes per a sectors molt diferents. Aprendre a comunicar des de fora i des de dins alhora.</p></div>
+      <div class="card exp"><div class="k">Premsa local</div><h3>Periodisme a peu de carrer</h3><p>On es forja l'ofici: contrastar, escriure clar i explicar el que passa. Redacció i coordinació d'un diari digital local.</p></div>
     </div>
+    <p class="exp-now"><strong>Avui</strong> acompanyo organitzacions i projectes com a consultor independent d'estratègia i incidència. I des del març, també soc regidor de Cultura, Joventut i Cooperació a l'Ajuntament de Subirats.</p>
   </div>
 </section>
 
