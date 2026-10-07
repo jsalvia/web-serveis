@@ -64,6 +64,7 @@
   .section-lead{color:var(--muted);max-width:62ch;margin-top:-.2em}
 
   .grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));margin-top:34px}
+  @media(min-width:760px){.grid.pairs{grid-template-columns:1fr 1fr}}
   .card{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:24px;transition:transform .16s ease,box-shadow .16s ease,border-color .16s ease}
   .card:hover{transform:translateY(-3px);box-shadow:0 14px 34px rgba(24,24,24,.07);border-color:#d9cfc0}
   .card .ic{width:38px;height:38px;border-radius:8px;background:var(--soft);color:var(--accent);display:flex;align-items:center;justify-content:center;margin-bottom:14px}
@@ -200,11 +201,12 @@
 <section id="trajectoria">
   <div class="wrap">
     <div class="eyebrow"><span class="num">05</span> Trajectòria</div>
-    <h2 class="section-title">Més de deu anys en primera línia.</h2>
-    <p class="section-lead">Del periodisme local a la direcció de comunicació nacional. Tres etapes que, més que un currículum, són tres escoles — i totes tres les poso avui al servei de la teva causa.</p>
-    <div class="grid">
-      <div class="card exp"><div class="k">Primera línia política</div><h3>Direcció de comunicació nacional</h3><p>Al capdavant del relat, les campanyes electorals, el discurs i la veu pública d'una organització, en un cicle polític que ho va capgirar tot. Coordinació d'equips i comunicació interna.</p></div>
-      <div class="card exp"><div class="k">Agències, mitjans i digital</div><h3>Comunicar per a clients</h3><p>Cooperatives de comunicació, mitjans digitals i projectes socials: màrqueting, xarxes, continguts i campanyes per a sectors molt diferents. Aprendre a comunicar des de fora i des de dins alhora.</p></div>
+    <h2 class="section-title">Més de deu anys a escala nacional. I dues dècades al món local.</h2>
+    <p class="section-lead">Del periodisme local a la direcció de comunicació nacional, passant per agències i mitjans digitals. I tot el camí intermedi: grups i candidatures municipals de mides molt diferents, de pobles petits a ciutats grans.</p>
+    <div class="grid pairs">
+      <div class="card exp"><div class="k">Primera línia nacional</div><h3>Direcció de comunicació nacional</h3><p>Al capdavant del relat, les campanyes electorals, el discurs i la veu pública d'una organització, en un cicle polític que ho va capgirar tot. Coordinació d'equips i comunicació interna.</p></div>
+      <div class="card exp"><div class="k">Política de proximitat</div><h3>Grups i candidatures municipals</h3><p>Anys portant la comunicació de formacions municipals de mides molt diferents —de pobles petits a ciutats grans— i assessorant campanyes electorals municipals.</p></div>
+      <div class="card exp"><div class="k">Agències, mitjans i digital</div><h3>Comunicar per a clients</h3><p>Cooperatives de comunicació, mitjans digitals i projectes socials: màrqueting, xarxes, continguts i campanyes per a sectors molt diferents.</p></div>
       <div class="card exp"><div class="k">Premsa local</div><h3>Periodisme a peu de carrer</h3><p>On es forja l'ofici: contrastar, escriure clar i explicar el que passa. Redacció i coordinació d'un diari digital local.</p></div>
     </div>
     <p class="exp-now"><strong>Avui</strong> acompanyo organitzacions i projectes com a consultor independent d'estratègia i incidència. I des del març, també soc regidor de Cultura, Joventut i Cooperació a l'Ajuntament de Subirats.</p>
