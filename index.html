@@ -16,111 +16,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://jsalvia.github.io/web-serveis/og-image.png">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23a33b22'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='18' fill='%23fff' text-anchor='middle'%3EJS%3C/text%3E%3C/svg%3E">
-<style>
-  :root{
-    --ink:#151a20; --muted:#5b6472; --line:#e7e1d7;
-    --bg:#faf7f2; --card:#ffffff; --band:#f3ece3;
-    --accent:#a33b22; --accent-dark:#7f2c19; --soft:#f6e8e1;
-    --max:1020px;
-  }
-  *{box-sizing:border-box}
-  html{scroll-behavior:smooth}
-  body{margin:0;background:var(--bg);color:var(--ink);
-    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-    line-height:1.65;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
-  h1,h2,h3,.brand,.quote{font-family:Georgia,"Iowan Old Style","Palatino Linotype","Times New Roman",serif;line-height:1.18;margin:0 0 .5em;font-weight:600}
-  a{color:var(--accent);text-decoration:none}
-  a:hover{text-decoration:underline}
-  a:focus-visible,.btn:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:8px}
-  .wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
-  .eyebrow{display:flex;align-items:center;gap:12px;text-transform:uppercase;letter-spacing:.18em;font-size:.72rem;color:var(--accent);font-weight:700;margin-bottom:18px}
-  .eyebrow::after{content:"";flex:1;height:1px;background:var(--line)}
-  .num{font-variant-numeric:tabular-nums;color:var(--muted);font-weight:700}
-
-  header.top{position:sticky;top:0;z-index:20;background:rgba(250,247,242,.86);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
-  header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
-  .brand{font-size:1.06rem;letter-spacing:.01em;color:var(--ink)}
-  .brand b{color:var(--accent)}
-  nav a{margin-left:22px;color:var(--ink);font-size:.92rem}
-  nav a:hover{color:var(--accent);text-decoration:none}
-  @media(max-width:660px){nav a{margin-left:14px;font-size:.84rem}}
-
-  .hero{position:relative;padding:76px 0 66px;overflow:hidden}
-  .hero::before{content:"";position:absolute;inset:0;background:
-     radial-gradient(720px 340px at 88% -10%, var(--soft), transparent 70%);
-     pointer-events:none}
-  .hero .wrap{position:relative}
-  .hero-grid{display:grid;gap:40px;align-items:center;grid-template-columns:1.18fr .82fr}
-  @media(max-width:820px){.hero-grid{grid-template-columns:1fr;gap:28px}}
-  .hero-foto{margin:0}
-  .hero-foto img{width:100%;height:auto;display:block;border-radius:8px;box-shadow:0 18px 44px rgba(24,24,24,.14)}
-  .hero h1{font-size:clamp(2rem,4.6vw,3.15rem);max-width:22ch;margin-bottom:.35em}
-  .hero p.lead{font-size:clamp(1.04rem,2vw,1.22rem);color:var(--muted);max-width:54ch;margin:0 0 30px}
-  .cta-row{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
-  .btn{display:inline-block;background:var(--accent);color:#fff;padding:13px 26px;border-radius:8px;font-weight:600;font-size:.97rem;box-shadow:0 1px 0 rgba(0,0,0,.04)}
-  .btn:hover{background:var(--accent-dark);text-decoration:none}
-  .btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line);box-shadow:none}
-  .btn.ghost:hover{border-color:var(--accent);color:var(--accent);background:transparent}
-  .cta-link{margin-left:6px;font-weight:600;font-size:.97rem;border-bottom:1px solid rgba(24,24,24,.28);padding-bottom:1px}
-  .cta-link:hover{color:var(--accent);border-color:var(--accent);text-decoration:none}
-  .cta-note{margin:16px 0 0;font-size:.87rem;color:var(--muted);max-width:46ch}
-  .cta-row-center{justify-content:center}
-  .avail-note{margin:20px auto 0;font-size:.92rem;color:#c9ccd2;max-width:46ch;line-height:1.5}
-  .hero-tag{margin:0 0 26px;font-size:.98rem;color:var(--muted);max-width:52ch}
-  .hero-tag b{color:var(--accent)}
-
-  section{padding:66px 0}
-  .band{background:var(--band)}
-  .section-title{font-size:clamp(1.45rem,3vw,2rem);max-width:26ch}
-  .section-lead{color:var(--muted);max-width:62ch;margin-top:-.2em}
-
-  .grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));margin-top:34px}
-  @media(min-width:760px){.grid.pairs{grid-template-columns:1fr 1fr}}
-  .card{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:24px;transition:transform .16s ease,box-shadow .16s ease,border-color .16s ease}
-  .card:hover{transform:translateY(-3px);box-shadow:0 14px 34px rgba(24,24,24,.07);border-color:#d9cfc0}
-  .card .ic{width:38px;height:38px;border-radius:8px;background:var(--soft);color:var(--accent);display:flex;align-items:center;justify-content:center;margin-bottom:14px}
-  .card .ic svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
-  .card h3{font-size:1.08rem;margin-bottom:.35em}
-  .card p{margin:0;color:var(--muted);font-size:.95rem}
-
-  ul.plain{list-style:none;padding:0;margin:22px 0 0}
-  ul.plain li{padding:12px 0 12px 30px;position:relative;border-bottom:1px solid var(--line)}
-  ul.plain li:last-child{border-bottom:0}
-  ul.plain li::before{content:"";position:absolute;left:2px;top:20px;width:9px;height:9px;background:var(--accent);border-radius:50%}
-  ul.plain strong{font-weight:600}
-
-  .quote{border-left:3px solid var(--accent);padding:6px 0 6px 20px;font-size:clamp(1.15rem,2.4vw,1.5rem);max-width:60ch;color:var(--ink)}
-
-  .steps{counter-reset:s;margin-top:34px;display:grid;gap:28px 34px;grid-template-columns:1fr 1fr}
-  @media(max-width:720px){.steps{grid-template-columns:1fr;gap:24px}}
-  .step{position:relative;padding:0 0 0 56px;counter-increment:s}
-  .step::before{content:counter(s);position:absolute;left:0;top:-2px;width:38px;height:38px;border:1.5px solid var(--accent);color:var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;background:var(--bg)}
-  .band .step::before{background:var(--band)}
-  .step h3{font-size:1.02rem;margin-bottom:.2em}
-  .step p{margin:0;color:var(--muted);font-size:.95rem}
-
-  .card.exp{border-top:3px solid var(--accent)}
-  .card .k{font-size:.74rem;text-transform:uppercase;letter-spacing:.14em;color:var(--accent);font-weight:700;margin-bottom:10px}
-  .card .mut{margin:12px 0 0;padding-top:12px;border-top:1px solid var(--line);font-size:.86rem;color:var(--muted)}
-  .exp-now{margin-top:26px;color:var(--muted);max-width:62ch}
-
-  .cta-box{background:var(--ink);color:#fff;border-radius:8px;padding:48px;text-align:center}
-  .cta-box h2{color:#fff;font-size:clamp(1.5rem,3vw,2rem)}
-  .cta-box p{color:#c9ccd2;max-width:52ch;margin:0 auto 26px}
-  .cta-box .btn{background:#fff;color:var(--ink)}
-  .cta-box .btn:hover{background:#e9ebee}
-  .cta-box .btn.ghost{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.38)}
-  .cta-box .btn.ghost:hover{background:rgba(255,255,255,.08);color:#fff;border-color:#fff}
-  .contact-lines a{color:#fff;text-decoration:underline;text-underline-offset:2px}
-  .contact-lines a:hover{color:#fff;text-decoration-thickness:2px}
-  .contact-lines{margin-top:28px;font-size:1rem;display:grid;gap:8px;justify-items:center}
-  .contact-lines div{color:#c9ccd2}
-  .contact-lines strong{display:inline-block;min-width:92px;color:#8f959d;font-weight:600;font-size:.82rem;text-transform:uppercase;letter-spacing:.08em}
-
-  footer{padding:34px 0 56px;color:var(--muted);font-size:.85rem;border-top:1px solid var(--line)}
-  footer .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
-  footer a{color:var(--muted)}
-</style>
+<link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
 
@@ -128,9 +24,8 @@
   <div class="wrap">
     <div class="brand">Jordi Salvia <b>·</b> Comunicació</div>
     <nav>
-      <a href="#serveis">Serveis</a>
-      <a href="#metode">Mètode</a>
-      <a href="#diagnosi">Diagnosi</a>
+      <a href="serveis/">Serveis</a>
+      <a href="qui-soc/">Qui sóc</a>
       <a href="#contacte">Contacte</a>
     </nav>
   </div>
@@ -155,63 +50,30 @@
   </div>
 </section>
 
-<section class="band" id="serveis">
+<section id="que-faig">
   <div class="wrap">
-    <div class="eyebrow"><span class="num">01</span> En què et puc ajudar</div>
-    <div class="grid">
-      <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1.4" fill="currentColor" stroke="none"/></svg></div><h3>Estratègia i relat</h3><p>Objectiu, públics decisoris, missatge i moment. Un relat que es recorda i que et diferencia.</p></div>
-      <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15" rx="2.5"/><path d="M3.5 9.5h17M8 3.5v3M16 3.5v3"/><path d="M8 14h8"/></svg></div><h3>Planificació comunicativa</h3><p>De campanya, de mandat o de projecte: calendari, veus, canals i argumentari.</p></div>
-      <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 6.5A2.5 2.5 0 0 1 5.5 4h13A2.5 2.5 0 0 1 21 6.5v7a2.5 2.5 0 0 1-2.5 2.5H9l-4 3.5V16H5.5A2.5 2.5 0 0 1 3 13.5z"/><path d="M7.5 8.5h9M7.5 11.5h5.5"/></svg></div><h3>Discursos i guions</h3><p>Intervencions, rodes de premsa, debats i compareixences. Text que es diu bé i aguanta la rèplica.</p></div>
-      <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 11l18-5v12L3 14v-3z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/></svg></div><h3>Campanyes d'incidència</h3><p>Per canviar una política, aturar un projecte o posar un tema a l'agenda pública.</p></div>
-      <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg></div><h3>Resposta i contrarrelat</h3><p>Argumentaris per quan l'altre costat ataca, i per guanyar el marc del debat.</p></div>
-      <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg></div><h3>Gestió de crisi</h3><p>Protocol, missatge i acompanyament en calent, quan tot va de pressa.</p></div>
-    </div>
+    <div class="eyebrow"><span class="num">01</span> Què faig</div>
+    <h2 class="section-title">Estratègia, relat i campanyes. I el que calgui quan la cosa es complica.</h2>
+    <p class="section-lead">Sis feines, sovint combinades: estratègia i relat, planificació comunicativa, discursos i guions, campanyes d'incidència, resposta i contrarrelat, i gestió de crisi. Si no saps per on començar, no cal que ho tinguis clar: explica'm què necessites i ho mirem junts.</p>
+    <div class="cta-row teaser"><a class="btn ghost" href="serveis/">Veure serveis i modalitats →</a></div>
   </div>
 </section>
 
-<section id="metode">
+<section class="band" id="metode">
   <div class="wrap">
     <div class="eyebrow"><span class="num">02</span> Com treballo</div>
     <div class="steps">
       <div class="step"><h3>Escolto</h3><p>Què vols aconseguir i qui decideix. Sense això, la resta és soroll.</p></div>
-      <div class="step"><h3>Diagnostico</h3><p>D'on parteixes: què es diu de tu, qui et disputa el relat i on et poden fer mal.</p></div>
+      <div class="step"><h3>Miro</h3><p>D'on parteixes: què es diu de tu, qui et disputa el relat i on et poden fer mal.</p></div>
       <div class="step"><h3>Fixo la línia</h3><p>Què dius, què no dius i com ho dius. El marc del debat es guanya aquí.</p></div>
       <div class="step"><h3>Acompanyo</h3><p>Preparo materials, ho poso en marxa i ajusto. La comunicació es guanya al llarg del temps, no en un sol dia.</p></div>
     </div>
   </div>
 </section>
 
-<section id="diagnosi">
-  <div class="wrap">
-    <div class="eyebrow"><span class="num">03</span> Per començar</div>
-    <h2 class="section-title">Diagnosi de relat</h2>
-    <p class="section-lead">Dues o tres setmanes per mirar-te de fora i dir-te la veritat. En surts amb un informe i tres prioritats: què cal canviar, en quin ordre i amb quines paraules.</p>
-    <p class="section-lead">És un encàrrec tancat: informe, missatge central i sessió de presentació. Abans de començar et passo el pressupost; si no et quadra, no passa res.</p>
-    <div class="grid">
-      <div class="card"><h3>Què miro</h3><p>Què es diu de tu, qui et disputa el relat, on et poden fer mal i quin marge tens per moure el marc del debat.</p></div>
-      <div class="card"><h3>Què en surts</h3><p>Un informe escrit de vuit a deu pàgines, el missatge central i tres prioritats amb calendari. I una sessió per presentar-lo a qui decideix.</p></div>
-      <div class="card"><h3>Com ho fem</h3><p>Converses amb l'equip i anàlisi del discurs públic. Tu hi poses mitja hora i accés a la informació; la resta la faig jo.</p></div>
-    </div>
-    <div class="cta-row"><a class="btn" href="mailto:jsalvia@gmail.com?subject=Pressupost%3A%20diagnosi%20de%20relat">Demana pressupost</a></div>
-  </div>
-</section>
-
-<section id="publics">
-  <div class="wrap">
-    <div class="eyebrow"><span class="num">04</span> Per a qui treballo</div>
-    <h2 class="section-title">Organitzacions que volen transformar, no només explicar-se.</h2>
-    <ul class="plain">
-      <li><strong>Entitats i plataformes ciutadanes</strong> que volen posar un tema a l'agenda i moure'l.</li>
-      <li><strong>Grups polítics i institucions</strong> que volen guanyar el debat, no només participar-hi.</li>
-      <li><strong>ONG i moviments socials</strong> que es disputen l'atenció amb missatges més ràpids i millor finançats.</li>
-      <li><strong>El món cooperatiu i l'economia social i solidària</strong> que volen fer les coses bé.</li>
-    </ul>
-  </div>
-</section>
-
 <section id="mirada">
   <div class="wrap">
-    <div class="eyebrow"><span class="num">05</span> Per què jo</div>
+    <div class="eyebrow"><span class="num">03</span> Per què jo</div>
     <h2 class="section-title">Ulls nous per a coses que ja no veus.</h2>
     <p class="section-lead">Una bona causa no avança tota sola. Cal saber explicar-la bé, en el moment just i a qui toca. D'això m'encarrego jo.</p>
     <p class="section-lead">Quan estàs ficat en el dia a dia, el detall se't menja i costa veure què importa de debò. Jo no hi estic dins, i això és un avantatge: miro la teva organització de fora, amb distància, i t'ajudo a posar el focus on toca.</p>
@@ -225,49 +87,11 @@
   </div>
 </section>
 
-<section class="band" id="trajectoria">
-  <div class="wrap">
-    <div class="eyebrow"><span class="num">06</span> Trajectòria</div>
-    <h2 class="section-title">Més de 25 anys comunicant. Del món local a la primera línia nacional.</h2>
-    <p class="section-lead">Del periodisme local a la direcció de comunicació nacional, passant per agències i mitjans digitals. I tot el camí intermedi: grups i candidatures municipals de mides molt diferents, de pobles petits a ciutats grans.</p>
-    <div class="grid pairs">
-      <div class="card exp"><div class="k">Primera línia nacional</div><h3>Direcció de comunicació nacional</h3><p>Al capdavant del relat, les campanyes electorals, el discurs i la veu pública d'una organització, en un cicle polític que ho va capgirar tot. Coordinació d'equips i comunicació interna.</p></div>
-      <div class="card exp"><div class="k">Política de proximitat</div><h3>Grups i candidatures municipals</h3><p>Anys portant la comunicació de formacions municipals de mides molt diferents —de pobles petits a ciutats grans— i assessorant campanyes electorals municipals.</p></div>
-      <div class="card exp"><div class="k">Agències, mitjans i digital</div><h3>Comunicar per a clients</h3><p>Cooperatives de comunicació, mitjans digitals i projectes socials: màrqueting, xarxes, continguts i campanyes per a sectors molt diferents.</p></div>
-      <div class="card exp"><div class="k">Premsa local</div><h3>Periodisme a peu de carrer</h3><p>On es forja l'ofici: contrastar, escriure clar i explicar el que passa. Redacció i coordinació d'un diari digital local.</p></div>
-    </div>
-    <p class="exp-now"><strong>Avui</strong> acompanyo organitzacions i projectes com a consultor independent d'estratègia i incidència.</p>
-  </div>
-</section>
-
-<section id="modalitats">
-  <div class="wrap">
-    <div class="eyebrow"><span class="num">07</span> Modalitats</div>
-    <div class="grid">
-      <div class="card"><h3>Per projecte</h3><p>Una campanya, un discurs, una crisi. Un objectiu concret, amb data i abast tancat.</p><p class="mut">Inclou: diagnosi, relat, materials i acompanyament durant tot el projecte.</p></div>
-      <div class="card"><h3>Acompanyament mensual</h3><p>Estratègia, relat i suport continuat, com un departament de comunicació extern.</p><p class="mut">Inclou: línia, calendari, materials i resposta ràpida quan cal.</p></div>
-    </div>
-  </div>
-</section>
-
-<section id="preguntes">
-  <div class="wrap">
-    <div class="eyebrow">Preguntes freqüents</div>
-    <h2 class="section-title">El que sol preguntar tothom abans de començar.</h2>
-    <div class="grid pairs">
-      <div class="card"><h3>Quant costa?</h3><p>La primera conversa de 20 minuts és gratis. Si hi ha encaix, et passo un pressupost tancat abans de començar: sense hores, sense extres i sense sorpreses a la factura.</p></div>
-      <div class="card"><h3>Quant triga?</h3><p>Una diagnosi, dues o tres setmanes. Un pla de comunicació, de tres a sis. Una crisi no espera: comencem el mateix dia.</p></div>
-      <div class="card"><h3>Amb qui treballes?</h3><p>Amb entitats, plataformes, grups polítics, institucions i empreses. Amb qualsevol que tingui una causa i vulgui moure-la.</p></div>
-      <div class="card"><h3>És confidencial?</h3><p>Sempre. Si cal, signem un acord abans que vegi cap document. El que es parla amb mi no surt d'aquí.</p></div>
-    </div>
-  </div>
-</section>
-
 <section id="contacte">
   <div class="wrap">
     <div class="cta-box">
       <h2>Com començar</h2>
-      <p>Una primera conversa de vint minuts, gratis i sense compromís. Si hi ha encaix, el primer encàrrec sol ser una diagnosi de relat: dues o tres setmanes, un informe i tres prioritats.</p>
+      <p>Una primera conversa de vint minuts, gratis i sense compromís. Explica'm què necessites i et dic si ho puc resoldre, com ho faria i amb quin abast. Si hi ha encaix, et passo el pressupost abans de començar.</p>
       <div class="cta-row cta-row-center">
         <a class="btn" href="mailto:jsalvia@gmail.com?subject=Reuni%C3%B3%20de%2020%20minuts">Escriu-me</a>
         <a class="btn ghost" href="https://cal.com/jordi-salvia/20min" target="_blank" rel="noopener">Tria hora</a>
