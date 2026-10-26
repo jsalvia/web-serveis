@@ -110,3 +110,7 @@
   .back-link{display:inline-block;margin:0 0 18px;font-size:.9rem;color:var(--muted)}
   .back-link:hover{color:var(--accent)}
   .teaser{margin-top:28px}
+
+/* ---- heroi sense foto (portada) ---- */
+  .hero-solo{max-width:840px}
+  .hero-solo .hero-copy .lead{max-width:56ch}
