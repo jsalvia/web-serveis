@@ -61,6 +61,11 @@
   .btn:hover{background:var(--accent-dark);text-decoration:none}
   .btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line);box-shadow:none}
   .btn.ghost:hover{border-color:var(--accent);color:var(--accent);background:transparent}
+  .cta-link{margin-left:6px;font-weight:600;font-size:.97rem;border-bottom:1px solid rgba(24,24,24,.28);padding-bottom:1px}
+  .cta-link:hover{color:var(--accent);border-color:var(--accent);text-decoration:none}
+  .cta-note{margin:16px 0 0;font-size:.87rem;color:var(--muted);max-width:46ch}
+  .cta-row-center{justify-content:center}
+  .avail-note{margin:20px auto 0;font-size:.92rem;color:#c9ccd2;max-width:46ch;line-height:1.5}
   .hero-tag{margin:0 0 26px;font-size:.98rem;color:var(--muted);max-width:52ch}
   .hero-tag b{color:var(--accent)}
 
@@ -104,6 +109,10 @@
   .cta-box p{color:#c9ccd2;max-width:52ch;margin:0 auto 26px}
   .cta-box .btn{background:#fff;color:var(--ink)}
   .cta-box .btn:hover{background:#e9ebee}
+  .cta-box .btn.ghost{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.38)}
+  .cta-box .btn.ghost:hover{background:rgba(255,255,255,.08);color:#fff;border-color:#fff}
+  .contact-lines a{color:#fff;text-decoration:underline;text-underline-offset:2px}
+  .contact-lines a:hover{color:#fff;text-decoration-thickness:2px}
   .contact-lines{margin-top:28px;font-size:1rem;display:grid;gap:8px;justify-items:center}
   .contact-lines div{color:#c9ccd2}
   .contact-lines strong{display:inline-block;min-width:92px;color:#8f959d;font-weight:600;font-size:.82rem;text-transform:uppercase;letter-spacing:.08em}
@@ -135,8 +144,10 @@
       <p class="lead">Treballo amb entitats, plataformes, grups polítics i moviments socials que tenen una causa i volen fer-la avançar.</p>
       <p class="hero-tag"><b>25 anys</b> comunicant causes · direcció de comunicació nacional i campanyes electorals</p>
       <div class="cta-row">
-        <a class="btn" href="https://cal.com/jordi-salvia/20min" target="_blank" rel="noopener">Parlem 20 minuts</a>
+        <a class="btn" href="mailto:jsalvia@gmail.com?subject=Reuni%C3%B3%20de%2020%20minuts">Parlem 20 minuts</a>
+        <a class="cta-link" href="https://cal.com/jordi-salvia/20min" target="_blank" rel="noopener">o tria tu l'hora →</a>
       </div>
+      <p class="cta-note">20 minuts, per videotrucada, sense compromís. Responc en menys de 24 h.</p>
     </div>
     <figure class="hero-foto">
       <img src="img/jordi-treballant.jpg" alt="Jordi Salvia treballant en un ordinador" width="760" height="808" loading="eager" decoding="async">
@@ -181,7 +192,7 @@
       <div class="card"><h3>Què en surts</h3><p>Un informe escrit de vuit a deu pàgines, el missatge central i tres prioritats amb calendari. I una sessió per presentar-lo a qui decideix.</p></div>
       <div class="card"><h3>Com ho fem</h3><p>Converses amb l'equip i anàlisi del discurs públic. Tu hi poses mitja hora i accés a la informació; la resta la faig jo.</p></div>
     </div>
-    <div class="cta-row"><a class="btn" href="mailto:jsalvia@protonmail.com?subject=Pressupost%3A%20diagnosi%20de%20relat">Demana pressupost</a></div>
+    <div class="cta-row"><a class="btn" href="mailto:jsalvia@gmail.com?subject=Pressupost%3A%20diagnosi%20de%20relat">Demana pressupost</a></div>
   </div>
 </section>
 
@@ -257,10 +268,15 @@
     <div class="cta-box">
       <h2>Com començar</h2>
       <p>Una primera conversa de vint minuts, gratis i sense compromís. Si hi ha encaix, el primer encàrrec sol ser una diagnosi de relat: dues o tres setmanes, un informe i tres prioritats.</p>
-      <a class="btn" href="https://cal.com/jordi-salvia/20min" target="_blank" rel="noopener">Parlem 20 minuts</a>
+      <div class="cta-row cta-row-center">
+        <a class="btn" href="mailto:jsalvia@gmail.com?subject=Reuni%C3%B3%20de%2020%20minuts">Escriu-me</a>
+        <a class="btn ghost" href="https://cal.com/jordi-salvia/20min" target="_blank" rel="noopener">Tria hora</a>
+      </div>
+      <p class="avail-note">Tinc franges els dilluns, dimarts i dijous, de 9 a 11. Si no te'n va bé cap, escriu-me i en busquem una.</p>
       <div class="contact-lines">
-        <div><strong>Correu</strong> jsalvia@protonmail.com</div>
-        <div><strong>Telèfon</strong> 615 145 977</div>
+        <div><strong>Correu</strong> <a href="mailto:jsalvia@gmail.com">jsalvia@gmail.com</a></div>
+        <div><strong>Telèfon</strong> <a href="tel:+34615145977">615 145 977</a></div>
+        <div><strong>WhatsApp</strong> <a href="https://wa.me/34615145977?text=Hola%20Jordi%2C%20he%20vist%20la%20web%20i%20voldria%20parlar%20de..." target="_blank" rel="noopener">escriu-me</a></div>
         <div><strong>Bloc</strong> jordisalvia.pages.dev</div>
       </div>
     </div>
