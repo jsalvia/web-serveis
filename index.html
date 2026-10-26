@@ -31,6 +31,7 @@
   h1,h2,h3,.brand,.quote{font-family:Georgia,"Iowan Old Style","Palatino Linotype","Times New Roman",serif;line-height:1.18;margin:0 0 .5em;font-weight:600}
   a{color:var(--accent);text-decoration:none}
   a:hover{text-decoration:underline}
+  a:focus-visible,.btn:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:8px}
   .wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
   .eyebrow{display:flex;align-items:center;gap:12px;text-transform:uppercase;letter-spacing:.18em;font-size:.72rem;color:var(--accent);font-weight:700;margin-bottom:18px}
   .eyebrow::after{content:"";flex:1;height:1px;background:var(--line)}
@@ -49,14 +50,18 @@
      radial-gradient(720px 340px at 88% -10%, var(--soft), transparent 70%);
      pointer-events:none}
   .hero .wrap{position:relative}
+  .hero-grid{display:grid;gap:40px;align-items:center;grid-template-columns:1.18fr .82fr}
+  @media(max-width:820px){.hero-grid{grid-template-columns:1fr;gap:28px}}
+  .hero-foto{margin:0}
+  .hero-foto img{width:100%;height:auto;display:block;border-radius:8px;box-shadow:0 18px 44px rgba(24,24,24,.14)}
   .hero h1{font-size:clamp(2rem,4.6vw,3.15rem);max-width:22ch;margin-bottom:.35em}
   .hero p.lead{font-size:clamp(1.04rem,2vw,1.22rem);color:var(--muted);max-width:54ch;margin:0 0 30px}
   .cta-row{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
-  .btn{display:inline-block;background:var(--accent);color:#fff;padding:13px 26px;border-radius:5px;font-weight:600;font-size:.97rem;box-shadow:0 1px 0 rgba(0,0,0,.04)}
+  .btn{display:inline-block;background:var(--accent);color:#fff;padding:13px 26px;border-radius:8px;font-weight:600;font-size:.97rem;box-shadow:0 1px 0 rgba(0,0,0,.04)}
   .btn:hover{background:var(--accent-dark);text-decoration:none}
   .btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line);box-shadow:none}
   .btn.ghost:hover{border-color:var(--accent);color:var(--accent);background:transparent}
-  .hero-tag{margin:24px 0 0;font-size:.9rem;color:var(--muted)}
+  .hero-tag{margin:0 0 26px;font-size:.98rem;color:var(--muted);max-width:52ch}
   .hero-tag b{color:var(--accent)}
 
   section{padding:66px 0}
@@ -93,7 +98,7 @@
   .card .mut{margin:12px 0 0;padding-top:12px;border-top:1px solid var(--line);font-size:.86rem;color:var(--muted)}
   .exp-now{margin-top:26px;color:var(--muted);max-width:62ch}
 
-  .cta-box{background:var(--ink);color:#fff;border-radius:10px;padding:48px;text-align:center}
+  .cta-box{background:var(--ink);color:#fff;border-radius:8px;padding:48px;text-align:center}
   .cta-box h2{color:#fff;font-size:clamp(1.5rem,3vw,2rem)}
   .cta-box p{color:#c9ccd2;max-width:52ch;margin:0 auto 26px}
   .cta-box .btn{background:#fff;color:var(--ink)}
@@ -122,16 +127,19 @@
 </header>
 
 <section class="hero">
-  <div class="wrap">
-    <div>
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
       <div class="eyebrow">Comunicació estratègica i d'incidència</div>
       <h1>Relat, campanyes i crisi per a qui vol canviar les coses.</h1>
       <p class="lead">Treballo amb entitats, plataformes, grups polítics i moviments socials que tenen una causa i volen fer-la avançar.</p>
+      <p class="hero-tag"><b>25 anys</b> comunicant causes · direcció de comunicació nacional i campanyes electorals</p>
       <div class="cta-row">
         <a class="btn" href="#diagnosi">Demana una diagnosi</a>
       </div>
-      <p class="hero-tag"><b>25 anys</b> comunicant causes · direcció de comunicació nacional i campanyes electorals</p>
     </div>
+    <figure class="hero-foto">
+      <img src="img/jordi-treballant.jpg" alt="Jordi Salvia treballant en un ordinador" width="760" height="808" loading="eager" decoding="async">
+    </figure>
   </div>
 </section>
 
