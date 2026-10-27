@@ -186,3 +186,10 @@
   .checklist li::before{position:absolute;left:0;top:0;font-weight:700}
   .checklist.yes li::before{content:"✓";color:var(--accent)}
   .checklist.no li::before{content:"✕";color:#9a4a3a}
+
+/* ---- Pàgina de serveis ---- */
+  .entry-main{padding:32px}
+  .entry-main h3{font-size:1.35rem;margin-bottom:.35em}
+  .entry-main p{max-width:64ch}
+  .entry-main .mut{max-width:64ch}
+  @media(max-width:560px){.entry-main{padding:24px}}
