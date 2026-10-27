@@ -48,7 +48,8 @@
   .cta-link:hover{color:var(--accent);border-color:var(--accent);text-decoration:none}
   .cta-note{margin:16px 0 0;font-size:.87rem;color:var(--muted);max-width:46ch}
   .cta-row-center{justify-content:center}
-  .avail-note{margin:20px auto 0;font-size:.92rem;color:#c9ccd2;max-width:54ch;line-height:1.5}
+  .avail-note{margin:32px auto 0;font-size:.92rem;color:#c9ccd2;max-width:54ch;line-height:1.5}
+  .note-mark{color:#fff;font-weight:700;margin-right:4px}
   .hero-tag{margin:0 0 26px;font-size:.98rem;color:var(--muted);max-width:52ch}
   .hero-tag b{color:var(--accent)}
 
