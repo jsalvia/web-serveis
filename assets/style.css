@@ -158,3 +158,12 @@
   .contact-lines div{display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap}
   .contact-lines .ci{display:inline-flex;width:18px;height:18px;flex:0 0 18px;color:#c9ccd2}
   .contact-lines .ci svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+
+/* ---- Pàgina de mètode ---- */
+  .step .out{margin:12px 0 0;padding-top:10px;border-top:1px solid var(--line);font-size:.86rem;color:var(--muted)}
+  .step .out b{color:var(--accent);font-weight:600}
+  .checklist{list-style:none;padding:0;margin:14px 0 0;display:grid;gap:10px}
+  .checklist li{position:relative;padding-left:24px;color:var(--muted);font-size:.95rem;line-height:1.45}
+  .checklist li::before{position:absolute;left:0;top:0;font-weight:700}
+  .checklist.yes li::before{content:"✓";color:var(--accent)}
+  .checklist.no li::before{content:"✕";color:#9a4a3a}
