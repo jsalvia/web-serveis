@@ -2,7 +2,7 @@
     --ink:#151a20; --muted:#5b6472; --line:#e7e1d7;
     --bg:#faf7f2; --card:#ffffff; --band:#f3ece3;
     --accent:#a33b22; --accent-dark:#7f2c19; --soft:#f6e8e1;
-    --max:1020px;
+    --max:820px;
   }
   *{box-sizing:border-box}
   html{scroll-behavior:smooth}
@@ -55,7 +55,7 @@
   .section-title{font-size:clamp(1.45rem,3vw,2rem);max-width:26ch}
   .section-lead{color:var(--muted);max-width:62ch;margin-top:-.2em}
 
-  .grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));margin-top:34px}
+  .grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));margin-top:34px}
   @media(min-width:760px){.grid.pairs{grid-template-columns:1fr 1fr}}
   .card{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:24px;transition:transform .16s ease,box-shadow .16s ease,border-color .16s ease}
   .card:hover{transform:translateY(-3px);box-shadow:0 14px 34px rgba(24,24,24,.07);border-color:#d9cfc0}
